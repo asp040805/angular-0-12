@@ -1,0 +1,30 @@
+<p>Start editing to see some magic happen :)</p>
+<br />
+<input
+  [ngStyle]="{ padding: '15px' }"
+  [class.main]="hasClass"
+  [ngClass]="classList"
+  type="text"
+  #names
+  [value]="name"
+  [(ngModel)]="name"
+/>
+<button [ngClass]="'Ones'" (click)="getName(names.value)">Click</button><br />
+<b>{{ name }}</b>
+<p>-----------------------------------------------------</p>
+<input
+  [ngStyle]="{ padding: '15px' }"
+  [class.main]="hasClass"
+  [ngClass]="classList"
+  type="text"
+  #namex
+  [value]="txt"
+/>
+<button [ngClass]="'Ones'" (click)="setData(namex)">Click</button><br />
+<b>{{ txt }}</b>
+<p>-----------------------------------------------------</p>
+<h1 *ngIf="show; then temp1; else temp2">.Net Core 6.0 + Angular 15</h1>
+<button [ngClass]="'Ones'" (click)="setHide()">{{ btntext }}</button><br />
+<p>-----------------------------------------------------</p>
+<ng-template #temp1> Template One </ng-template>
+<ng-template #temp2> Template Two </ng-template>
